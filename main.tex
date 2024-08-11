@@ -1,0 +1,202 @@
+%------------------------
+% Shubh Resume Template
+% Author: Shubham Kumar
+% License: CC-BY-4.0
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+% font options
+\usepackage[sc]{mathpazo}
+\linespread{1.05}  % palladio needs more leading (space between lines)
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+% sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% custom commands
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\cvheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}\justifying}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1:}} {#2}\hfill \\
+  % \foreach \x in {1,...,5}{%
+  %   \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  % \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+% contact information
+\begin{center}
+  \textbf{\LARGE\scshape Shubham Kumar} \\
+  \vspace{1pt}\small
+  \faAddressBook \href{mailto:}{ sshubhamk1@hotmail.com}
+  $\ \diamond\ $
+  \faMobile* +91 9877883408
+  $\ \diamond\ $
+  \faGithub  \href{https://github.com/sshubhamk1}{ github.com/sshubhamk1} \\
+  \faLinkedin \href{https://www.linkedin.com/in/sshubhamk1}{ linkedin.com/in/sshubhamk1}
+  $\ \diamond\ $
+  \faHouseUser \href{https://sshubhamk1.github.io}{ sshubhamk1.github.io}
+\end{center}
+
+\section{Summary}
+Experienced Software Engineer with over 3 years of experience in backend and frontend development, microservices architecture, and AI code evaluation. Adept at optimizing system performance and leading cross-functional teams. Seeking a senior engineering role to leverage my technical and leadership skills.
+
+
+\section{Professional Experience}
+\cvheadingstart
+  \cvheading
+  {Scale AI}{San Francisco, California, United States (Remote)}{Software Engineer (Contract)}{03/2024 - Present}
+  \cvitemstart
+ \cvitem{\textbf{AI Code Evaluation}: Assessed AI-generated code for readability, correctness and best practices.}
+ \cvitem{\textbf{Problem Solving}: Solved complex coding problems with functional and efficient solutions.}
+ \cvitem{\textbf{Code Review}: Identified and fixed functional and security vulnerabilities in AI-generated code.}
+ \cvitem{\textbf{Mentorship}: Conducted code reviews and mentored junior developers.}
+  \cvitem{\textbf{Skills: } Python3, Pandas, Numpy, Matplotlib, scikit-learn}
+  \cvitemend
+  \cvheading
+  {Techstat dynamics pvt limited}{Ludhiana, Punjab (Remote)}{Lead Software Engineer (FreeLancer)}{11/2023 - 02/2024}
+  \cvitemstart
+  \cvitem{\textbf{Microservices Architecture}: Developed a microservice-based architecture for improved maintainability and streamlined deployments.}
+  \cvitem{\textbf{Reliable Data Transmission}: Implemented WebSocket communication for stable and efficient data exchange between trading broker and portal.}
+  \cvitem{\textbf{Efficient Communication}: Designed and integrated Redis Pub/Sub architecture for seamless microservice communication.}
+  \cvitem{\textbf{Containerization}: Utilized Docker Compose for containerization and orchestration of microservices.}
+  \cvitem{\textbf{Performance Optimization}: Conducted performance testing and monitoring to identify and resolve bottlenecks proactively.}
+  \cvitem{\textbf{Skills: } Python3, Django, websocket, PostgreSQL, ReactJS, Redis, Nodejs, Nginx, Docker}
+  \cvitemend
+  \cvheading
+    {Radisys Corporation}{Bangalore, Karnataka}
+    {Senior Software Engineer, 5G Platform Team}{07/2021 - 11/2023}
+  \cvitemstart
+    \cvitem{\textbf{Optimized System Performance and Scalability}:Reduced JIO CCDU Server startup and shutdown times by over 50 seconds. Decreased server size by 72\%. Automated setup and configuration, minimizing errors.}
+    \cvitem{\textbf{Enhanced Monitoring and Logging}: Added customizable metrics and alarms in SysMon. Fixed memory leaks and improved CPU utilization metrics in NGP logger.}
+    \cvitem{\textbf{Leadership and Collaboration}: Led a team of five in a hackathon. Participated in feature discussions with the JIO team. Mandatory reviewer for all platform repositories.}
+    \cvitem{\textbf{Automation and CI/CD Integration}: Developed Jenkins build scripts, automated CCDU image building, and created scripts for test cases and code coverage reports. Implemented custom GCC flags and patches for open-source libraries.}
+    \cvitem{\textbf{Process and Environment Customization}: Created startup scripts for custom environments in ProcMon. Ensured compatibility and performance by applying patches before building open-source libraries.}
+    \cvitem{\textbf{Innovative Feature Development}: Implemented WebSocket communication for reliable data transmission and Redis Pub/Sub for microservice communication. Added new features to enhance functionality across systems.}
+    \cvitem{\textbf{Skils: } Object Oriented Design, High level Design, Draw.io, RHEL, Docker}
+  \cvitemend
+  Software Engineer, 5G Platform Team
+  \cvitemstart
+    \cvitem{\textbf{Bug Fixes}: Resolved issues in Process Monitor and System Monitor, including date issues in CentOS.}
+    \cvitem{\textbf{Test Case Development}: Added comprehensive test cases for Process Monitor and System Monitor.}
+    \cvitem{\textbf{Integration Testing}: Conducted integration testing of Process Monitor with software upgrades and coordinated rollback tests with the OAM team.}
+    \cvitem{\textbf{Skills: } C/C++, Bash, Python, Linux, CentOS}
+  \cvitemend
+
+
+
+  \cvheading
+    {Think201}{Bangalore, Karnataka (Remote)}
+    {Software Engineer Intern, Web Application Backend Team}{09/2020 - 11/2020}
+  \cvitemstart
+    \cvitem{\textbf{Backend Development}: Built the backend of a web application using Node.js.}
+    \cvitem{\textbf{API and Model Design}: Created model schemas and APIs based on specified requirements.}
+    \cvitem{\textbf{Skills: } Node.js, Typescript, PostgreSQL, MongoDB, Express, Swagger, Postman}
+  \cvitemend
+
+  
+
+\cvheadingend
+
+
+
+\vspace{-5pt}
+
+\section{Technical Skills}
+\cvskill{Programming Language}{Python $\ \diamond\ $ Javascript $\ \diamond\ $ C/C++$\ \diamond\ $ Java}
+\cvskill{Web Development}{HTML$\ \diamond\ $ CSS $\ \diamond\ $\ Bootstrap $\ \diamond\ $ Javascript$\ \diamond\ $ ReactJS $\ \diamond\ $ Node.js $\ \diamond\ $ Django$\ \diamond\ $ Express.js}
+\cvskill{Database management}{SQL (MySQL, PostgreSQL) $\ \diamond\ $ NoSQL (MongoDB, Cassandra)}
+\cvskill{Miscellaneous}{Git $\ \diamond\ $ Docker $\ \diamond\ $ AWS $\ \diamond\ $  GCP $\ \diamond\ $ REST API $\ \diamond\ $ Data Structures \& Algorithms $\ \diamond\ $ Object-Oriented Design $\ \diamond\ $ Microservice Architecture $\ \diamond\ $  Design Patterns $\ \diamond\ $ Web Security}
+% \vspace{2pt}
+
+\vspace{2pt}
+
+\section{Education}
+\cvheadingstart
+  \cvheading
+    {National Institute of Technology Karnataka}{Surathkal, Karnataka}
+    {M.Tech(Research) in Computer Science \& Engineering - Information Security}{08/2019 - 12/2022}
+  \cvheading
+    {Lovely Professional University}{Phagwara, Punjab}
+    {B.Tech in Computer Science \& Engineering}{09/2015 - 06/2019}
+\cvheadingend
+
+\section{Additional Projects}
+\cvheadingstart
+  \cvheading
+    {National Institute of Technology Karnataka}{Surathkal, Karnataka}
+    {Research Scholar, Information Security}{12/2020 - 12/2021}
+  \cvitemstart
+  \cvitem{\textbf{Research}: Conducted research on network-level mitigation of Mirai malware in IoT.}
+    \cvitem{\textbf{Environment Setup}: Created an isolated environment to demonstrate Mirai malware propagation.}
+    \cvitem{\textbf{Mitigation Implementation}: Implemented a solution to mitigate Mirai malware.}
+    \cvitem{\textbf{Publications}: Published 3 papers on the findings and solutions developed in this project.}
+    \cvitem{\textbf{Skills: } Python, Flask, Mysql, Docker, C, Golang, React.js, IoT, DDoS attacks}
+  \cvitemend
+
+\cvheadingend
+
+
+\end{document}
